@@ -24,38 +24,45 @@ function menu(container) {
     const comboItemPrice = document.createElement("p");
 
     title.textContent = "Menu";
-    drinkTitle.textContent = "Drink";
+    title.classList.add("title");
+    drinkTitle.textContent = "Drinks";
     drinkItemTitle.textContent = "Tap water, 250ml";
     drinkItemDescription.textContent = "Fresh water, straight from the tap";
     drinkItemPrice.textContent = "$1.50";
-    dishTitle.textContent = "Dish";
+    dishTitle.textContent = "Dishes";
     dishItemTitle.textContent = "Gray, 1kg";
     dishItemDescription.textContent = "Gray";
     dishItemPrice.textContent = "$2.50";
-    comboTitle.textContent = "Combo";
+    comboTitle.textContent = "Combos";
     comboItemTitle.textContent = "Gray, 1kg + tap water, 250ml";
     comboItemDescription.textContent = "Good combo";
     comboItemPrice.textContent = "$5.00";
 
     container.appendChild(title);
+    drinks.appendChild(drinkTitle);
+    drinks.classList.add("drinks");
     drinkItem.appendChild(drinkItemTitle);
     drinkItem.appendChild(drinkItemDescription);
     drinkItem.appendChild(drinkItemPrice);
     drinks.appendChild(drinkItem);
-    container.appendChild(drinkTitle);
+    drinkItem.classList.add("menu-item");
     container.appendChild(drinks);
+    dishes.appendChild(dishTitle);
+    dishes.classList.add("dishes");
     dishItem.appendChild(dishItemTitle);
     dishItem.appendChild(dishItemDescription);
     dishItem.appendChild(dishItemPrice);
     dishes.appendChild(dishItem);
-    container.appendChild(dishTitle);
+    dishItem.classList.add("menu-item");
     container.appendChild(dishes);
+    combos.appendChild(comboTitle);
+    combos.classList.add("combos");
     comboItem.appendChild(comboItemTitle);
     comboItem.appendChild(comboItemDescription);
     comboItem.appendChild(comboItemPrice);
     combos.appendChild(comboItem);
-    container.appendChild(comboTitle);
     container.appendChild(combos);
+    comboItem.classList.add("menu-item");
 }
 
 export {menu}

@@ -3,9 +3,10 @@ import { removeContent } from "./removeContent";
 function home(container) {
     removeContent(container);
 
+    const logo = document.createElement("div");
     const title = document.createElement("h1");
     const description = document.createElement("p");
-    const hours = document.createElement("section");
+    const hours = document.createElement("div");
     const hoursTitle = document.createElement("h2");
     const hoursList = document.createElement("ul");
     const hoursSunday = document.createElement("li");
@@ -15,13 +16,17 @@ function home(container) {
     const hoursThursday = document.createElement("li");
     const hoursFriday = document.createElement("li");
     const hoursSaturday = document.createElement("li");
-    const location = document.createElement("section");
+    const location = document.createElement("div");
     const locationTitle = document.createElement("h2");
     const locationAddress = document.createElement("p");
-    const locationDescription = document.createElement("p");
+    const locationLandmark = document.createElement("p");
     
+    logo.classList.add("logo");
     title.textContent = "Grey Slush";
+    title.classList.add("title");
     description.textContent = "We make food";
+    description.classList.add("description");
+    hours.classList.add("hours");
     hoursTitle.textContent = "Hours";
     hoursSunday.textContent = "Sunday: 0am - 6pm";
     hoursMonday.textContent = "Monday: 10pm - 6am";
@@ -30,12 +35,17 @@ function home(container) {
     hoursThursday.textContent = "Thursday: 10pm - 6am";
     hoursFriday.textContent = "Friday: 10pm - 6am";
     hoursSaturday.textContent = "Saturday: 0am - 6am";
+    location.classList.add("location");
     locationTitle.textContent = "Location";
     locationAddress.textContent = "987 St. Highway, HighwayState, HighwayCity";
-    locationDescription.textContent = "Below highway";
+    locationAddress.classList.add("address");
+    locationLandmark.textContent = "Below highway";
+    locationLandmark.classList.add("landmark");
 
-    container.appendChild(title);
-    container.appendChild(description);
+    
+    logo.appendChild(title);
+    logo.appendChild(description);
+    container.appendChild(logo);
     hoursList.appendChild(hoursSunday);
     hoursList.appendChild(hoursMonday);
     hoursList.appendChild(hoursTuesday);
@@ -48,7 +58,7 @@ function home(container) {
     container.appendChild(hours);
     location.appendChild(locationTitle);
     location.appendChild(locationAddress);
-    location.appendChild(locationDescription);
+    location.appendChild(locationLandmark);
     container.appendChild(location);
 }
 
