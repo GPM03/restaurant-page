@@ -187,5 +187,19 @@ img {
 @media screen and (max-width: 43.75rem) {
   .content {
     width: 100%;
+    height: 100%;
+  }
+
+  .about {
+    height: 100%;
+  }
+  
+  img {
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    
+
+    object-fit: cover;
   }
 }
