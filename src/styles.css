@@ -1,6 +1,17 @@
 * {
   margin: 0;
+  font-family: monospace;
   box-sizing: border-box;
+
+}
+
+body {
+  background-color: lightgray;
+  height: 100%;
+}
+
+html {
+  height: 100%;
 }
 
 .navbar {
@@ -10,6 +21,7 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem 0;
+  border-bottom: 1px solid black;
 }
 
 button {
@@ -25,4 +37,155 @@ button:active {
   padding: 1rem 2rem;
   transform: translate(3px, 3px);
   
+}
+
+.content {
+  width: 50%;
+  min-height: 100%;
+  margin: 0 auto;
+  background-color: white;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding-top: 1rem;
+
+}
+
+.content--about {
+  width: 100%;
+  padding: 0;
+  min-height: fit-content;
+  height: fit-content;
+
+}
+
+.logo {
+  background-color: gray;
+  padding: 0 2rem;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 1px solid black;
+  width: fit-content;
+  margin: 0 auto;
+  text-wrap: nowrap;
+
+}
+
+.title {
+  font-size: 4rem;
+  margin: 2rem 0 0 0;
+  text-align: center;
+  text-wrap: nowrap;
+
+}
+
+.title--about {
+  font-size: clamp(3rem, 6vw, 6vw);
+  position: absolute;
+  top: 4vw;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: white;
+  margin: 0;
+  width: 100%;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, 2px 2px 0 black,
+  2px 2px 0 black;
+}
+
+.description {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.hours {
+  margin: 2rem 0 0 0;
+  text-wrap: nowrap;
+
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+ul {
+  display: block;
+  width: fit-content;
+  padding: 0;
+  margin: 1rem auto 0 auto;
+  font-size: 1.4rem;
+  list-style-type: none;
+}
+
+.location {
+  margin: 2rem 0 0 0;
+  text-align: center;
+}
+
+.address {
+  font-size: 1.4rem;
+}
+
+.landmark {
+  font-size: 1.2rem;
+}
+
+.menu-item {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.drinks {
+  margin-top: 2rem;
+}
+
+.dishes {
+  margin-top: 2rem;
+}
+
+.combos {
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.about {
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+.img-credit {
+  position: absolute;
+  font-size: clamp(1rem, 1.2vw, 1.2vw);
+  color: white;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, 1px 1px 0 black,
+  1px 1px 0 black;
+}
+
+.about-text {
+  font-size: clamp(1.4rem, 4vw, 4vw);
+  position: absolute;
+  bottom: 6rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: white;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, 2px 2px 0 black,
+  2px 2px 0 black;
+}
+
+@media screen and (max-width: 43.75rem) {
+  .content {
+    width: 100%;
+  }
 }
